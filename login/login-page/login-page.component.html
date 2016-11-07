@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <h3>Log In</h3>
+        <hr>
+
+        <div>
+            <label for="username">Username:</label>
+            <input class="form-control" type="text" name="username" id="username" ng-model="$ctrl.credentials.username">
+        </div>
+        <br>
+
+        <div>
+            <label for="password">Password:</label>
+            <input class="form-control" type="password" name="password" id="password" ng-model="$ctrl.credentials.password">
+        </div>
+
+        <div ng-show="$ctrl.errorMessage" class="well error" id="errorMessage">Invalid username or password</div>
+
+        <hr>
+        <div>
+            <button class="btn btn-primary login" type="button" ng-disabled="$ctrl.authenticating" ng-click="$ctrl.login()">
+                <i class="fa fa-spin fa-spinner" ng-show="$ctrl.authenticating"></i> <span>Log in</span>
+            </button>
+        </div>
+    </div>
+</div>

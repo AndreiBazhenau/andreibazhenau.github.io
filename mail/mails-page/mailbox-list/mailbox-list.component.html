@@ -1,0 +1,7 @@
+<div class="folderlist">
+    <ul class="selectlist-mail list-unstyled">
+        <li class="folder" ui-sref-active="selected" ng-repeat="mailbox in $ctrl.mailboxes" >
+            <a ui-sref="mailboxes.mail-table({mailboxId: mailbox._id})"><i class="fa"></i>{{mailbox.title}}</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,32 @@
+<div>
+    <div class="navheader" ng-if="$ctrl.isAuthenticated()">
+        <ul class="nav nav-tabs ng-scope">
+            <li ui-sref-active="active">
+                <a ui-sref="mailboxes" role="button">mailboxes</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="users" role="button">users</a>
+            </li>
+
+            <li class="navbar-right">
+                <button class="btn btn-primary fa fa-home" id="home" ui-sref="home"></button>
+                <button style="margin-right: 15px;" class="btn btn-primary" id="newmessage" ui-sref="mail-create()">
+                    <i class="fa fa-envelope"></i> New Message
+                </button>
+            </li>
+
+            <li class="navbar-text navbar-right logged-in-user" style="margin: 0.5em 1.5em;">
+                <div class="ng-binding">
+                    {{$ctrl.getAuthenticatedUser()}} <i class="fa fa-chevron-down"></i>
+                    <div class="hoverdrop">
+                        <button class="btn btn-primary logout" id="logout" ng-click="$ctrl.logout()" >Log Out</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <ui-view>
+        <http-static-load-indicator></http-static-load-indicator>
+    </ui-view>
+</div>

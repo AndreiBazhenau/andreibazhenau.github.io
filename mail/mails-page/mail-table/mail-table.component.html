@@ -1,0 +1,17 @@
+<div class="messages">
+    <table>
+        <thead>
+            <tr>
+                <td>Sender</td>
+                <td>Subject</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="letter in $ctrl.letters" ui-sref="mailboxes.mail-item-detailed({mailboxId: $ctrl.mailboxId, letterId: letter._id})">
+                <td>{{letter.to}}</td>
+                <td>{{letter.subject}}</td>
+            </tr>
+        </tbody>
+    </table>
+<div>

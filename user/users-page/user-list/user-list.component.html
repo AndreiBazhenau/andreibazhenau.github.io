@@ -1,0 +1,13 @@
+<ul class="selectlist-user list-unstyled">
+    <li>
+        <a ui-sref="users.user-new()">
+            <button class="btn btn-primary">
+                <i class="fa fa-pencil"></i><span>New Contact</span>
+            </button>
+        </a>
+    </li>
+    <li>&nbsp;</li>
+    <li ng-repeat = "user in $ctrl.users" ui-sref-active="selected">
+        <a ui-sref="users.user-detailed({userId:user._id})">{{user.fullName}}</a>
+    </li>
+</ul>

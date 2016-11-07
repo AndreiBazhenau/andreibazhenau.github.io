@@ -1,0 +1,22 @@
+<div class="message">
+    <div class="header">
+        <div>
+            <h4>{{$ctrl.letter.subject}}</h4>
+            <h5>{{$ctrl.letter.to}}</h5>
+        </div>
+
+        <div class="line2">
+            <div>
+                <button class="btn btn-primary" ng-click="$ctrl.goBack()">
+                    <i class="fa fa-reply"></i> <span>Back</span>
+                </button>
+                <button class="btn btn-primary" ng-click="$ctrl.delete()">
+                    <i class="fa fa-close"></i> <span>Delete</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        {{$ctrl.letter.body}}
+    </div>
+</div>

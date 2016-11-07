@@ -1,0 +1,18 @@
+<div>
+    <div class="flex-h">
+        <div class="details">
+            <h3>{{$ctrl.user.fullName}}</h3>
+            <div><label>Date of birth</label><span>{{$ctrl.user.birthdate | date : shortDate}}</span></div>
+            <div><label>Gender</label><span>{{$ctrl.user.gender}}</span></div>
+            <div><label>Address</label><span>{{$ctrl.user.address}}</span></div>
+            <div><label>Email</label><span>{{$ctrl.user.email}}</span></div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" ui-sref="users.user-edit({userId:$ctrl.user._id})">
+        <i class="fa fa-pencil"></i><span>Edit</span>
+    </button>
+    <button class="btn btn-primary" ng-click="$ctrl.delete()">
+        <i class="fa fa-remove"></i><span>Delete</span>
+    </button>
+</div>
